@@ -3,7 +3,15 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd"
              version="3.2">
-    <persistence-unit name="default">
+    <persistence-unit name="default" transaction-type="JTA">
+        <jta-data-source>jdbc/ParkingLotResource</jta-data-source>
+        <class>org.example.parkinglot.entities.User</class>
+        <class>org.example.parkinglot.entities.Car</class>
+
+        <properties>
+            <property name="jakarta.persistence.schema-generation.database.action" value="none" />
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
+        </properties>
 
     </persistence-unit>
 </persistence>
