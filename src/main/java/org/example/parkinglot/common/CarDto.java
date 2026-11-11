@@ -24,6 +24,11 @@ public class CarDto {
         return LicensePlate;
     }
 
+    public String getParkingSpot() {
+        return parkingSpot;
+    }
 
-
+    public String getOwnerName() {
+        return ownerName;
+    }
 }

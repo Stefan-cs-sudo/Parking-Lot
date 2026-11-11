@@ -8,9 +8,16 @@
         <class>org.example.parkinglot.entities.User</class>
         <class>org.example.parkinglot.entities.Car</class>
 
-        <properties>
+       <!--  <properties>
             <property name="jakarta.persistence.schema-generation.database.action" value="none" />
             <property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
+        </properties>
+         -->
+        <properties>
+
+            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create" />
+
+            <property name="eclipselink.ddl-generation.output-mode" value="database" />
         </properties>
 
     </persistence-unit>
